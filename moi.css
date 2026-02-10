@@ -1,0 +1,283 @@
+/* Laman Utama */
+body {
+      margin: 0;
+      font-family: montserrat, Sans-Serif;
+      background-color: #0e4566;
+    }
+.header {
+      display: flex;
+      background-color: #1d2e56;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: auto;
+      padding: 10px 20px;
+      align-items: center;
+      z-index: 100;
+      gap: 45px;
+    }
+    #menuBtn {
+      font-size: 18px;
+      padding: 10px;
+      background-color: #1d2e56;
+    }
+    #proto {
+      height: 42px;
+      margin-left: 20px;
+    }
+.ban {
+  margin-top: 60px;
+  margin-bottom: 30px;
+}
+
+/* sidebar */
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: -300px; 
+      width: 260px;
+      height: 100%;
+      background: linear-gradient(135deg,#FFFFFF,#b9c3ef);
+      ;
+      padding: 15px;
+      transition: 0.3s;
+      z-index: 300;
+      overflow-y: auto;
+    }
+  .overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+}
+
+.overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.body {
+      margin: 0;
+      height: 200vh; 
+      background: linear-gradient(135deg,#ffffff, #555555);
+      font-family: sans-serif;
+  }
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 200;
+}
+
+.overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/*modal slide Up */
+.sheet {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 85%;
+  background: linear-gradient(135deg,#ffffff,#b9c3ef) ;
+  border-top-left-radius: 70px;
+  border-top-right-radius: 70px;
+
+  /* SEMBUNYI */
+  transform: translateY(100%);
+  transition: transform 0.35s ease;
+
+  z-index: 400;
+}
+
+.sheet.active {
+  transform: translateY(0);
+  
+}
+
+.button.close{
+  position: relative;
+  top: 16px;
+  right: -40px;          
+  left: 40px;
+}
+
+.sheet-img img {
+  width: 100%;
+  max-height: 250px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.nav {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: flex;
+  align-items: center;
+  gap: 40px;
+
+}
+
+.nav button {
+  border: none;
+  background: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+.text {
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  min-width: 180px;
+  text-align: center;
+}
+
+.text.hide {
+  opacity: 0;
+  transform: translatex(-20px);
+}
+
+/* Rating Nilai */
+.anonim {
+  background-color: #5169A2;
+  color: #ffffff;
+  border-radius: 25px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  text-align: center;
+  align-items: center;
+  border: 10px;
+  margin-bottom: 15px;
+}
+.include {
+  background-color: #e4dfdf;
+  color: #000000;
+  border:2px solid #000000;
+  border-radius: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  line-height: 1.6;
+  text-align: center;
+  margin: 0;
+  align-items: center;
+}
+.stars {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0;
+  justify-content: center;
+  align-items: center;
+}
+
+/*naz ini efek diamond*/
+.star img {
+    width: 50px;
+    height: 50px;
+    filter: grayscale(100%) opacity(0.4);
+    transition: 0.3s;
+}
+.star.active img {
+    filter: grayscale(0%) brightness(1.2);
+    transform: scale(1.1);
+}
+
+.boxBrown {
+  background-color: #eae3dc;
+  border:2px solid #000000;
+  border-radius: 15px;
+  padding: 20px;
+  line-height: 1.6;
+  text-align: center;
+  margin: 0;
+  align-items: center;
+}
+.kategori {
+  margin-top: 15px;
+  background: #5169A2;
+  color: #ffffff;
+  padding: 15px;
+  border-radius: 15px;
+  text-align: center;
+  margin: 0;
+  align-items: center;
+  font-family: Helvetica, sans-serif;
+}
+
+.persentase {
+  margin-top: 15px;
+  background: #6c9cc3;
+  padding: 15px;
+  border-radius: 15px;
+  display: flex;          
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.ratinglist {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ratingrow {
+  align-items: center;
+  display: flex; 
+  gap: 10px;
+  margin: 8px 0;
+}
+
+.barrow {
+  flex: 1;
+  height: 12px;
+  background: #e5e7eb;
+  border-radius: 999px;
+  overflow: hidden;
+  }
+
+.barfill {
+   height: 100%;
+   width: 0%;
+   background: #3b82f6;
+   transition: width 0.4s ease;
+}
+
+.barlabel {
+  width: 40px;
+  text-align: right;
+  font-weight: bold;
+}
+
+.nilai {
+  margin-top: 20px;
+  background: #5169a2;
+  border-radius: 18px;
+  padding: 15px;
+  gap: 15px;
+  align-items: center;
+}
+
+.submit{
+  background:linear-gradient(135deg, #ffffff, #b9c3e1);;
+  border: none;
+  border-radius: 20px;
+  padding: 15px;
+  cursor: pointer;
+  display: block;
+  width: 220px;
+  margin: 25px auto;
+  font-family: 'Playfair Display', serif;
+  border:2px solid #000000;
+}
