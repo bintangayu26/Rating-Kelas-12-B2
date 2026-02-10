@@ -88,7 +88,7 @@ tombolKirim.addEventListener('click', async function() {
         console.log("Mengirim:", dataKirim);
         
         // Kirim ke Google Apps Script
-        await fetch(SCRIPT_URL, {
+        const response = await fetch(SCRIPT_URL, {
         method: 'POST',
         headers: {
         'Content-Type': 'application/json'
@@ -130,4 +130,5 @@ tombolKirim.addEventListener('click', async function() {
         tombolKirim.disabled = false;
     }
     
+
 });
