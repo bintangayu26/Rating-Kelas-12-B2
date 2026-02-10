@@ -149,6 +149,11 @@ body {
 }
 
 /* Rating Nilai */
+.sb {
+  text-align: center;
+  color: #e4dfdf;
+}
+
 .anonim {
   background-color: #5169A2;
   color: #ffffff;

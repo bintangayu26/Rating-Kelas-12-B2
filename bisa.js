@@ -14,6 +14,7 @@ function openSheet() {
   overlay.classList.add("active");
 
   document.getElementById("sheetImage").src = image[index];
+  document.getElementById("sheetText").textContent = texts[index];
 
   sidebar.style.left = "-300px";
 }
@@ -31,16 +32,19 @@ function closeSheet() {
 const image = [
 "fotofoto.png",
 "bapak.png",
-""
+"sutradara.png",
+"penulis.png",
+"utama.png",
+"1tambahan.png",
 ]
 
 const texts = [
   "Foto-foto semasa latihan Uprak",
   "Produser",
   "Sutradara & Asisten Sutradara",
+  "Penulis Naskah",
   "Pemeran Utama",
   "Pemeran Pendamping",
-  "Kru & Tim",
 ];
 let index = 0;
 
@@ -61,7 +65,7 @@ function changeText() {
 
 function AfterText() {
   const textEl = document.getElementById("sheetText");
-  //const imgEl = document.getElementById("sheetImage");
+  const imgEl = document.getElementById("sheetImage");
 
 
   // animasi keluar
@@ -71,7 +75,7 @@ function AfterText() {
   setTimeout(() => {
     index = (index + 1) % texts.length;
     textEl.textContent = texts[index];
-    //imgEl.src = images[index];
+    imgEl.src = image[index];
 
     // animasi masuk
     textEl.classList.remove("hide");
@@ -81,7 +85,7 @@ function AfterText() {
 
 function BeforeText() {
   const textEl = document.getElementById("sheetText");
-  //const imgEl = document.getElementById("sheetImage");
+  const imgEl = document.getElementById("sheetImage");
 
   // animasi keluar
   textEl.classList.add("hide");
@@ -89,7 +93,7 @@ function BeforeText() {
   setTimeout(() => {
     index = (index - 1 + texts.length) % texts.length;
     textEl.textContent = texts[index];
-    //imgEl.src = images[index];
+    imgEl.src = image[index];
 
     // animasi masuk
     textEl.classList.remove("hide");
